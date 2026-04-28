@@ -1,5 +1,5 @@
 ---
-const whatsappNumber = "573001234567";
+import { site } from '../config/site';
 ---
 
 <header class="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-sm shadow-md dark:bg-green-950/95 dark:border-b dark:border-green-800">
@@ -7,7 +7,7 @@ const whatsappNumber = "573001234567";
     <div class="flex items-center justify-between">
       <!-- Logo -->
       <a href="#inicio" class="text-2xl font-bold text-green-700 hover:text-green-600 transition-colors dark:text-green-400 dark:hover:text-green-300">
-        JIREH
+        {site.company.name}
       </a>
 
       <!-- Desktop Menu -->
@@ -16,7 +16,7 @@ const whatsappNumber = "573001234567";
         <a href="#nosotros" class="text-gray-700 hover:text-green-600 transition-colors font-medium dark:text-green-200 dark:hover:text-green-400">Nosotros</a>
         <a href="#servicios" class="text-gray-700 hover:text-green-600 transition-colors font-medium dark:text-green-200 dark:hover:text-green-400">Servicios</a>
         <a
-          href={`https://wa.me/${whatsappNumber}`}
+          href={`https://wa.me/${site.contact.whatsapp}`}
           target="_blank"
           rel="noopener noreferrer"
           class="bg-green-600 hover:bg-green-700 text-white px-5 py-2.5 rounded-full font-medium transition-all hover:shadow-lg flex items-center gap-2 dark:bg-green-700 dark:hover:bg-green-600"
@@ -54,7 +54,7 @@ const whatsappNumber = "573001234567";
         <a href="#nosotros" class="text-gray-700 hover:text-green-600 transition-colors font-medium py-2 dark:text-green-200 dark:hover:text-green-400">Nosotros</a>
         <a href="#servicios" class="text-gray-700 hover:text-green-600 transition-colors font-medium py-2 dark:text-green-200 dark:hover:text-green-400">Servicios</a>
         <a
-          href={`https://wa.me/${whatsappNumber}`}
+          href={`https://wa.me/${site.contact.whatsapp}`}
           target="_blank"
           rel="noopener noreferrer"
           class="bg-green-600 hover:bg-green-700 text-white px-5 py-3 rounded-full font-medium transition-all text-center flex items-center justify-center gap-2"
