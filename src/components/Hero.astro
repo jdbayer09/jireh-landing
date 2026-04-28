@@ -2,23 +2,23 @@
 const backgroundImage = "/hero-bg.jpg";
 ---
 
-<section id="inicio" class="relative min-h-screen flex items-center justify-center bg-gradient-to-br from-green-50 to-green-100 pt-20">
+<section id="inicio" class="relative min-h-screen flex items-center justify-center bg-gradient-to-br from-green-50 to-green-100 dark:from-green-950 dark:to-green-900 pt-20">
   <div class="absolute inset-0 bg-[url('/hero-pattern.svg')] opacity-5"></div>
 
   <div class="container mx-auto px-4 py-20 relative z-10">
     <div class="max-w-4xl mx-auto text-center">
       <!-- Badge -->
-      <div class="inline-block bg-green-600/10 text-green-700 px-4 py-2 rounded-full text-sm font-semibold mb-6">
+      <div class="inline-block bg-green-600/10 text-green-700 dark:bg-green-400/10 dark:text-green-300 px-4 py-2 rounded-full text-sm font-semibold mb-6">
         Exportamos lo mejor de Colombia
       </div>
 
       <!-- Title -->
-      <h1 class="text-4xl md:text-6xl lg:text-7xl font-bold text-gray-900 mb-6 leading-tight">
+      <h1 class="text-4xl md:text-6xl lg:text-7xl font-bold text-gray-900 dark:text-green-50 mb-6 leading-tight">
         JIREH Exportaciones y Asesorías S.A.S
       </h1>
 
       <!-- Subtitle -->
-      <p class="text-lg md:text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
+      <p class="text-lg md:text-xl text-gray-600 dark:text-green-200 mb-8 max-w-2xl mx-auto">
         Conectamos la riqueza agrícola colombiana con el mundo. Especialistas en exportación de aguacate y productos de la tierra.
       </p>
 
@@ -32,7 +32,7 @@ const backgroundImage = "/hero-bg.jpg";
         </a>
         <a
           href="#nosotros"
-          class="bg-white hover:bg-gray-50 text-green-700 border-2 border-green-600 px-8 py-4 rounded-full font-semibold text-lg transition-all hover:shadow-lg"
+          class="bg-white hover:bg-gray-50 text-green-700 border-2 border-green-600 px-8 py-4 rounded-full font-semibold text-lg transition-all hover:shadow-lg dark:bg-green-900 dark:hover:bg-green-800 dark:text-green-200 dark:border-green-500"
         >
           Saber más
         </a>
@@ -42,7 +42,7 @@ const backgroundImage = "/hero-bg.jpg";
 
   <!-- Scroll indicator -->
   <div class="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce">
-    <svg class="w-6 h-6 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+    <svg class="w-6 h-6 text-green-600 dark:text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
       <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"/>
     </svg>
   </div>

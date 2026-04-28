@@ -16,7 +16,7 @@ import '../styles/global.css';
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 		<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
 	</head>
-	<body class="font-sans antialiased">
+	<body class="font-sans antialiased bg-white dark:bg-green-950 text-gray-900 dark:text-green-50 transition-colors duration-300">
 		<slot />
 	</body>
 </html>
@@ -32,3 +32,12 @@ import '../styles/global.css';
 		height: 100%;
 	}
 </style>
+
+<script is:inline>
+	(function() {
+		const stored = localStorage.getItem('theme');
+		if (stored === 'dark' || (!stored && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+			document.documentElement.classList.add('dark');
+		}
+	})();
+</script>
