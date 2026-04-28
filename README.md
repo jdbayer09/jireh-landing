@@ -1,46 +1,63 @@
-# Astro Starter Kit: Basics
+# JIREH Exportaciones y Asesorías S.A.S — Landing Page
 
-```sh
-npm create astro@latest -- --template basics
-```
+Landing page corporativa para **JIREH Exportaciones y Asesorías S.A.S**, empresa colombiana especializada en la exportación de aguacate y productos agrícolas.
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+## 🛠️ Stack tecnológico
 
-## 🚀 Project Structure
+- [Astro 6](https://astro.build/) — Framework de generación estática
+- [Tailwind CSS v4](https://tailwindcss.com/) — Estilos utilitarios (integrado vía `@tailwindcss/vite`)
+- [Cloudflare Pages](https://pages.cloudflare.com/) — Hosting y despliegue
 
-Inside of your Astro project, you'll see the following folders and files:
+## Requisitos
+
+- **Node.js** >= 22.12.0
+
+## 📁 Estructura del proyecto
 
 ```text
 /
-├── public/
-│   └── favicon.svg
-├── src
-│   ├── assets
-│   │   └── astro.svg
-│   ├── components
-│   │   └── Welcome.astro
-│   ├── layouts
-│   │   └── Layout.astro
-│   └── pages
-│       └── index.astro
-└── package.json
+├── public/                  # Archivos estáticos (favicon, imágenes)
+├── src/
+│   ├── assets/              # Imágenes optimizadas por Astro
+│   ├── components/          # Componentes (Header, Hero, About, Services, Contact, Footer)
+│   ├── config/
+│   │   └── site.ts          # Configuración centralizada (empresa, contacto, redes)
+│   ├── layouts/
+│   │   └── Layout.astro     # Layout principal (meta, fuentes, dark mode)
+│   ├── pages/
+│   │   └── index.astro      # Página principal
+│   └── styles/
+│       └── global.css       # Tailwind CSS + custom variants
+├── astro.config.mjs
+├── package.json
+└── tsconfig.json
 ```
 
-To learn more about the folder structure of an Astro project, refer to [our guide on project structure](https://docs.astro.build/en/basics/project-structure/).
+## 🧞 Comandos
 
-## 🧞 Commands
+Todos los comandos se ejecutan desde la raíz del proyecto:
 
-All commands are run from the root of the project, from a terminal:
+| Comando                              | Acción                                            |
+| :----------------------------------- | :------------------------------------------------ |
+| `npm install`                        | Instala dependencias                              |
+| `npm run dev`                        | Inicia servidor de desarrollo en `localhost:4321` |
+| `npm run build`                      | Genera el sitio estático en `./dist/`             |
+| `npm run preview`                    | Vista previa del build localmente                 |
+| `npx wrangler pages deploy dist`     | Despliega a Cloudflare Pages                      |
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
+## ⚙️ Configuración centralizada
 
-## 👀 Want to learn more?
+Todos los datos de la empresa (nombre, WhatsApp, email, redes sociales) están en un solo archivo:
 
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+```
+src/config/site.ts
+```
+
+Para actualizar información de contacto o redes sociales, edita únicamente este archivo.
+
+## 🌙 Modo oscuro
+
+- Se activa automáticamente según la preferencia del sistema operativo
+- El usuario puede alternar manualmente con el botón en el header
+- La preferencia se persiste en `localStorage`
+- Paleta oscura: tonos verdes (`green-950`, `green-900`, `green-800`)

@@ -35,6 +35,9 @@ Layout.astro          # <html> shell: meta, fonts (Inter via Google Fonts), glob
 
 ## Key Conventions
 
+- **Responsive design:** all pages and components must work correctly on mobile, tablet, and desktop. Use Tailwind breakpoints (`sm:`, `md:`, `lg:`) and test across device sizes. Mobile-first approach.
+- **Component separation:** never put everything in a single file. Each section or logical unit must be its own `.astro` component. Keep components focused and reusable. Styles, config, and layouts go in their respective directories.
+- **Centralized config:** all repeated company data (name, WhatsApp, email, social links) lives in `src/config/site.ts`. Import from there — never hardcode company info in components.
 - **Tailwind CSS v4** via `@import "tailwindcss"` in `src/styles/global.css` — no `tailwind.config` file; use Tailwind v4 CSS-first configuration
 - **All styling is Tailwind utility classes** — no custom CSS files beyond `global.css` and scoped `<style>` blocks in Layout
 - **Image optimization:** use `import { Image } from 'astro:assets'` with `format="webp"` for images in `src/assets/`; static files go in `public/`
@@ -42,4 +45,4 @@ Layout.astro          # <html> shell: meta, fonts (Inter via Google Fonts), glob
 - **No frameworks:** pure Astro components (`.astro` files), no React/Vue/Svelte. Client-side JS only via `<script>` tags in components
 - **TypeScript:** strict mode (`astro/tsconfigs/strict`)
 - **Brand colors:** green palette (`green-600` primary, `green-400` for dark mode accents, `green-50/100` for backgrounds)
-- **WhatsApp number:** hardcoded as `573001234567` in Header and Contact components — update in both places if changed
+- **WhatsApp number:** centralized in `src/config/site.ts` — update there to change across all components
